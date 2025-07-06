@@ -8,14 +8,14 @@
 <body>
   <h1>일해라 헥파고</h1>
 
-  <label>목표 메인레벨:
-    <select id="goalLevel">
-      <option value="6">6</option>
-      <option value="7">7</option>
-      <option value="8">8</option>
-      <option value="9">9</option>
-      <option value="10">10</option>
-    </select>
+<label for="goalLevel">목표 메인레벨:</label>
+<select id="goalLevel" onchange="updateUI()">
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10" selected>10</option>
+</select>
   </label>
 
   <div id="status">
@@ -23,6 +23,12 @@
     <p>서브스탯 레벨: <span id="subStat">0</span></p>
     <p>남은 강화 횟수: <span id="remaining">20</span></p>
   </div>
+  <label>
+  <input type="checkbox" id="sundayEvent" onchange="updateUI()"> 썬데이 이벤트 (5레벨 이상 확률 +20%)
+</label>
+
+<p>📊 현재 메인 강화 확률: <span id="mainProb">--</span>%</p>
+<p>🎯 목표 메인레벨 도달 확률: <span id="successRate">--</span>%</p>
 
   <button onclick="increaseMain()">메인 강화</button>
   <button onclick="increaseSub()">서브 강화</button>
