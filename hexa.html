@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>강화 입력 시뮬레이터</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>일해라 헥파고</h1>
+
+  <label>목표 메인레벨:
+    <select id="goalLevel">
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+    </select>
+  </label>
+
+  <div id="status">
+    <p>메인스탯 레벨: <span id="mainStat">0</span></p>
+    <p>서브스탯 레벨: <span id="subStat">0</span></p>
+    <p>남은 강화 횟수: <span id="remaining">20</span></p>
+  </div>
+
+  <button onclick="increaseMain()">메인 강화</button>
+  <button onclick="increaseSub()">서브 강화</button>
+  <button onclick="reset()">초기화</button>
+
+  <p id="message" style="font-weight: bold; color: green;"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
